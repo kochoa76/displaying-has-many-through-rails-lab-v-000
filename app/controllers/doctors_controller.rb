@@ -22,7 +22,7 @@ class DoctorsController < ApplicationController
 
   def update
     find_doctor
-    @doctor.update(doctor_params)  
+    @doctor.update(doctor_params)
   end
 
   private
