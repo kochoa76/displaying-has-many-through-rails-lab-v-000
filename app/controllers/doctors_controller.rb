@@ -1,23 +1,26 @@
 class DoctorsController < ApplicationController
-  def index 
-    @doctors = Doctors.all 
+  def index
+    @doctors = Doctors.all
 
-  def show 
+  def show
     find_doctor
-  end 
+  end
 
-  def new 
-  end 
+  def new
+  end
 
   def create
-  end 
+  end
 
-  def update 
-  end 
+  def update
+  end
 
-  private 
+  private
 
-  def find_doctor 
+  def find_doctor
     @doctor = Doctor.find(params[:id])
   end 
+
+  def doctor_params 
+    params.require(:doctor).permit(:name, :department)
 end
