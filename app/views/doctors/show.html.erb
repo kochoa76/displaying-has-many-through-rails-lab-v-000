@@ -1,6 +1,6 @@
 <h3> Doctor's Appointments </h3>
 <ul>
-<% @doctor.appointment.appointment_datetime.each do |app_time| %> 
-<li><%= app_time %></li>
+<% @doctor.appointments.each do |app| %> 
+<li><%= app.appointment_datetime %></li>
 <% end %>
 </ul>
