@@ -16,11 +16,11 @@ class DoctorsController < ApplicationController
         redirect_to doctor_path(@doctor)
       else
         render :new
-      end 
+      end
   end
 
   def update
-    find_doctor 
+    find_doctor
     @doctor.update(doctor_params) 
   end
 
