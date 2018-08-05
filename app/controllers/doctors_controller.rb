@@ -11,7 +11,7 @@ class DoctorsController < ApplicationController
   end
 
   def create
-    @doctor= Doctor.new(doctor_params)
+    @doctor= Doctor.create(doctor_params)
       if @doctor.save
         redirect_to doctor_path(@doctor)
       else
@@ -20,6 +20,8 @@ class DoctorsController < ApplicationController
   end
 
   def update
+    find_doctor 
+    @doctor.update(doctor_params) 
   end
 
   private
