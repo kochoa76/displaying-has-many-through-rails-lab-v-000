@@ -6,5 +6,5 @@ class Appointment < ActiveRecord::Base
   def self.appointment_datetime
     time= Time.now
     time.to_formatted_s(:long_ordinal)
-  end  
+  end
 end
