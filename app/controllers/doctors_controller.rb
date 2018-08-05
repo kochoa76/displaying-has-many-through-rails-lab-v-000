@@ -11,6 +11,12 @@ class DoctorsController < ApplicationController
   end
 
   def create
+    @doctor= Doctor.new(doctor_params)
+      if @doctor.save 
+        redirect_to doctor_path(@doctor)
+      else 
+        render :new 
+      end 
   end
 
   def update
@@ -24,5 +30,5 @@ class DoctorsController < ApplicationController
 
   def doctor_params
     params.require(:doctor).permit(:name, :department)
-  end 
+  end
 end
