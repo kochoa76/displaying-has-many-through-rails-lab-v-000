@@ -4,7 +4,7 @@ class Appointment < ActiveRecord::Base
 
 
   def human_time 
-    time= Time.now
-    time.to_formatted_s(:long_ordinal)
+    
+    appointment_datetime.to_formatted_s(:long_ordinal)
   end
 end
