@@ -8,4 +8,8 @@ class Appointment < ActiveRecord::Base
     # appointment_datetime.to_formatted_s(:long_ordinal)
     appointment_datetime.strftime("%B %d, %Y at %H:%M")
   end
+
+  def not_found
+  raise ActionController::RoutingError.new('Not Found')
+  end
 end
