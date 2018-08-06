@@ -1,8 +1,8 @@
 class AppointmentsController < ApplicationController
 
   def index
-  raise ActionController::RoutingError.new 
-  end 
+    raise ActionController::RoutingError.new 
+  end
 
   def show
     @appointment = Appointment.find(params[:id])
