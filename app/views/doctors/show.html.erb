@@ -1,6 +1,6 @@
 
 <ul>
 <% @doctor.appointments.each do |app| %>
-<li><%= app.human_time %></li>
+<li><%= app.human_time, patient_path(app.patient.name)%></li>
 <% end %>
 </ul>
