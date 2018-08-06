@@ -6,6 +6,6 @@ class Appointment < ActiveRecord::Base
   def human_time
 
     # appointment_datetime.to_formatted_s(:long_ordinal)
-    appointment_datetime.strftime(“at %I:%M")
+    appointment_datetime.strftime("at %I:%M")
   end
 end
