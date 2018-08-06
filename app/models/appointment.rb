@@ -10,6 +10,7 @@ class Appointment < ActiveRecord::Base
   end
 
   def self.not_found
-    raise ActionController::RoutingError.new('Not Found')
+    # raise ActionController::RoutingError.new('Not Found')
+     render :status => 404
   end
 end
