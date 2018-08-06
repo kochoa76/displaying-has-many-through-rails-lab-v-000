@@ -1,7 +1,7 @@
 class AppointmentsController < ApplicationController
 
   def index
-    @appointment = Appointment.new
+  raise ActionController::RoutingError.new 
   end 
 
   def show
